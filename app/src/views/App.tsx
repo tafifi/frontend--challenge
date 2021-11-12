@@ -112,16 +112,21 @@ const App: React.FC<{}> = () => {
               ))}
             </div>
           </div>
+          
           <Button className="search-button" loading={isSearching} onClick={search}>SEARCH</Button>
         </div>
       </header>
+
       <h1 className="title">Stories</h1>
+
       {!searchResults.length && !isEmpty && (
         <h2 className="subtitle">Use the search bar to look for stories</h2>
       )}
+
       {!searchResults.length && isEmpty && (
         <h2 className="subtitle">No results have been found, please use another search key!</h2>
       )}
+
       <section className="stories">
       {isSearching && range(0, 5).map(index => (
           <div className="story" key={index}>
@@ -145,6 +150,7 @@ const App: React.FC<{}> = () => {
             </div>
           </div>
         ))}
+
         {!isSearching && searchResults.map((story, index) => (
           <div className="story" key={index}>
             <div className="story-details">
