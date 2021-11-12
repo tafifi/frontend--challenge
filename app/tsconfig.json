@@ -30,12 +30,21 @@
     "noFallthroughCasesInSwitch": true
   },
   "paths": {
-		"api": ["api"],
-		"utils": ["utils"],
-		"components": ["components"],
-		"views": ["views"]
-	},
+    "api": [
+      "api"
+    ],
+    "utils": [
+      "utils"
+    ],
+    "components": [
+      "components"
+    ],
+    "views": [
+      "views"
+    ]
+  },
   "include": [
-    "src"
+    "src",
+    "tests"
   ]
 }

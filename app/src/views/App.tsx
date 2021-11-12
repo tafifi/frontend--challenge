@@ -9,6 +9,7 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import { range, useDebounce } from 'utils';
 import { Button } from 'components/Button';
+import { SearchInput } from 'components/Search';
 
 const App: React.FC<{}> = () => {
   const [searchQuery, setSearchQuery] = useState("")
@@ -80,24 +81,16 @@ const App: React.FC<{}> = () => {
     }
   }
 
-  const onSubmit = (event: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    if (event.key === "Enter") {
-      search()
-    }
-  }
-
   return (
     <main className="App">
       <header>
         <div className="main-search">
           <div className="main-search-input" onClick={(e) => e.stopPropagation()}>
             <Search />
-            <input
-              type="text"
+            
+            <SearchInput
               value={searchQuery}
-              onKeyDown={onSubmit}
-              autoComplete="none"
-              onChange={e => handleSearchChange(e.target.value)}
+              onChange={handleSearchChange}
               placeholder="Companies, Organisations, People or Places..."
             />
 
