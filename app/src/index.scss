@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import "styles/responsive";
+@import "styles/variables";
+
+html {
+  font-size: 90%;
+
+  @include tablet {
+    font-size: 100%;
+  }
+
+  @include desktop {
+    font-size: 110%;
+  }
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*, *::after {
+  box-sizing: border-box;
+}

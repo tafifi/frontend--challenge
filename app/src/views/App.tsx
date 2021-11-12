@@ -8,10 +8,12 @@ const App: React.FC<{}> = () => {
     <main className="App">
       <header>
         <div className="main-search">
-          <Search />
-          <input type="text" placeholder="Companies, Organisations, People or Places..." />
+          <div className="main-search-input">
+            <Search />
+            <input type="text" placeholder="Companies, Organisations, People or Places..." />
+          </div>
+          <button>SEARCH</button>
         </div>
-        <button>SEARCH</button>
       </header>
     </main>
   );

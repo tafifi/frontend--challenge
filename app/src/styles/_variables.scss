@@ -1,0 +1,17 @@
+// Fonts
+$main-font: 'Roboto', sans-serif;
+
+// Colors
+$gray: #dfe1e6;
+$dark: #7a758b;
+
+// Reusable classes
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}

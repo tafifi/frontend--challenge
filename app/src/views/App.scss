@@ -1,0 +1,63 @@
+@import "../styles/responsive";
+@import "../styles/variables";
+
+.App {
+  width: 100%;
+  max-width: 920px;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  @extend .flex-row;
+  border-bottom: 1px solid $gray;
+}
+
+.main-search {
+  width: 100%;
+  color: $gray;
+  @extend .flex-row;
+  align-items: center;
+  border: 2px solid $gray;
+  border-radius: 5px 10px 10px 5px;
+
+  .main-search-input {
+    flex: 1;
+    padding: 10px 20px;
+    @extend .flex-row;
+    align-items: center;
+  }
+  
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 1rem;
+    padding-left: 10px;
+    font-family: $main-font;
+
+    &::placeholder {
+      color: darken($gray, 20);
+    }
+  }
+
+  button {
+    border: none;
+    outline: none;
+    height: 100%;
+    color: $dark;
+    cursor: pointer;
+    padding: 0 20px;
+    font-weight: bold;
+    font-family: $main-font;
+    background: transparent;
+    transition: .3s opacity;
+    border-left: 2px solid $gray;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
