@@ -31,7 +31,7 @@
   },
   "paths": {
 		"api": ["api"],
-		"util": ["util"],
+		"utils": ["utils"],
 		"components": ["components"],
 		"views": ["views"]
 	},

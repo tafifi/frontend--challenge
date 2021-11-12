@@ -1,0 +1,37 @@
+.button {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+
+	.button-spinner {
+		opacity: 0;
+	}
+
+	&.loading {
+		.button-spinner {
+			opacity: 1;
+		}
+		span {
+			opacity: 0;
+		}
+	}
+}
+
+.button-spinner {
+	width: 1em;
+	height: 1em;
+	transition: 0;
+	border-radius: 50%;
+	position: absolute;
+	display: inline-block;
+	border-top: 2px solid black;
+	border-right: 2px solid transparent;
+	animation: load 700ms linear infinite;
+}
+
+@keyframes load {
+	to {
+		transform: rotate(360deg);
+	}
+}
