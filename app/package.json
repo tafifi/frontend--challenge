@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.34",
+    "proxy-middleware": "^0.15.0",
     "sass": "^1.43.4",
     "typescript": "^4.4.4"
   }

@@ -29,6 +29,12 @@
     "types": [],
     "noFallthroughCasesInSwitch": true
   },
+  "paths": {
+		"api": ["api"],
+		"util": ["util"],
+		"components": ["components"],
+		"views": ["views"]
+	},
   "include": [
     "src"
   ]

@@ -27,6 +27,7 @@ header {
     padding: 10px 20px;
     @extend .flex-row;
     align-items: center;
+    position: relative;
   }
   
   input {
@@ -43,7 +44,7 @@ header {
     }
   }
 
-  button {
+  .search-button {
     border: none;
     outline: none;
     height: 100%;
@@ -58,6 +59,43 @@ header {
 
     &:hover {
       opacity: 0.7;
+    }
+  }
+  
+  .auto-complete {
+    left: -2px;
+    top: 100%;
+    padding: 10px;
+    border-top: none;
+    position: absolute;
+    background: white;
+    border-radius: 0 5px;
+    border: 2px solid $gray;
+    width: calc(100% + 4px);
+    transition: .3s opacity;
+    visibility: hidden;
+    opacity: 0;
+    @extend .flex-column;
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      color: $dark;
+      outline: none;
+      padding: 10px;
+      cursor: pointer;
+      text-align: left;
+      background-color: white;
+      transition: .3s background-color;
+
+      &:hover {
+        background-color: $gray;
+      }
     }
   }
 }
